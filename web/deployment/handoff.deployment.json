@@ -1,0 +1,49 @@
+{
+  "chainId": 11155111,
+  "repoUrl": "https://github.com/identity-md-launches/launch-177-oraclechallengetoken-imdoracledisputereg",
+  "version": 1,
+  "launchId": "d1175e1d-2c3c-4a9d-bd20-c9347f680801",
+  "manifest": {
+    "kind": "evm_project",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "IMD Oracle Challenges prototype for Sepolia (chain 11155111), deployed through ProjectFactory under the pinned evm_project launch policy. Launch token: OracleChallengeToken (src/OracleChallengeToken.sol), a plain OpenZeppelin ERC-20 named Oracle Challenge Test, symbol OCTEST, 18 decimals, no constructor arguments; its constructor mints exactly 1,000,000,000 tokens (10^27 minor units) once to msg.sender, the factory, which performs the policy allocations (liquidity seeded with the launch token only, contributor rewards through the protocol MerkleDistributor). The token has no owner, minter, pauser, fee, hook, proxy or upgrade path and no function can change the supply after deployment. Sole application contract: IMDOracleDisputeRegistry (src/IMDOracleDisputeRegistry.sol), an unofficial, ownerless, append-only public registry of challenges to IMD oracle answers; anyone may open a dispute or append a response to an open dispute, and only the original challenger may withdraw their own dispute. Its constructor is nonpayable, takes no arguments and sets no state, so constructorArgs is empty and $token, $owner and $contract references are not used; the factory being msg.sender grants it nothing. The registry has no administrator, upgrade, pause, fees, bonds, rewards, staking, voting, token dependency or automatic verdicts, accepts no ETH (no receive, fallback or payable function) and makes no external calls. Holding or spending OCTEST is never required to use the registry, and the registry never reads, holds or moves OCTEST. The factory makes no initialization calls; both contracts are final at deployment. Pool: no hook, paired against native ETH (zero address), fee 3000, tickSpacing 60, initialPrice given as decimal sqrtPriceX96 (1:1); the effective opening price is derived by the deployer from the pinned policy's initialMarketCapWei. LP and MerkleDistributor are supplied by the protocol and are not listed here. The registry is not an oracle, an adjudicator or an appeals process: it cannot reverse IMD decisions, penalise agents or prove that a challenged answer is wrong; all disputes are public claims attributed to their submitting wallets, and wallet counts are not person counts. OCTEST is a Sepolia test token for this experiment, not the IMD payment token, and carries no value or return promise. Sepolia only; no mainnet deployment. Manifest check evidence: launch.json was validated against the LaunchManifest schema and refinements; docs/abi/OracleChallengeToken.json declares a nonpayable constructor with no inputs and docs/abi/IMDOracleDisputeRegistry.json declares no constructor, matching the empty constructorArgs above. Test-suite observation for reviewers (not a manifest or source defect): testFuzz_anyDeployerReceivesTheWholeSupply in test/OracleChallengeToken.allowances.t.sol does not exclude its own factory address from the fuzzed deployer, so a fuzz seed that samples that labelled address deploys a second token as the factory and trips the test's own 'earlier deployer gets nothing' assertion; the token minted correctly to msg.sender in that run. The assertion fails only on that seed-dependent collision and passes on fresh seeds; the fix is one extra vm.assume in the test, which is outside the manifest assignment's write scope.",
+    "token": {
+      "name": "Oracle Challenge Test",
+      "symbol": "OCTEST",
+      "contract": "OracleChallengeToken",
+      "decimals": 18
+    },
+    "contracts": [
+      {
+        "contract": "IMDOracleDisputeRegistry",
+        "constructorArgs": []
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "name": "OracleChallengeToken",
+      "txHash": "0xad58b792762c6f4a9a0a0e3ed57e4a7c7d0d028b5db3a12dc18b6fdb50726810",
+      "abiHash": "f36d2fe28b62f817a4fba0b78bb501b41895eada3982280273c063ad8183f577",
+      "address": "0x980f3004cb0149d6713837aa250f1c3e3753a5ac",
+      "blockNumber": 11781401,
+      "creationCodeHash": "ae3f152ad4768d74eaad96987153d99b541cd8113a4095d17119fc526085caef"
+    },
+    {
+      "name": "IMDOracleDisputeRegistry",
+      "txHash": "0xad58b792762c6f4a9a0a0e3ed57e4a7c7d0d028b5db3a12dc18b6fdb50726810",
+      "abiHash": "efb1d3acc4a0505f282b22fcf7eba866bf40fc78744ac14d5f986e9fdeef9ae0",
+      "address": "0xbcd93c85adb43628b6b0e4257c864158351b4ecb",
+      "blockNumber": 11781401,
+      "creationCodeHash": "d4121ec7acfd31564340f89581c30daae569431dc1d94afa16be440d21283e29"
+    }
+  ],
+  "sourceCommit": "1c468b72c3c42c3534a133f60000d2ca2dfa3867",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "75bdecdd3b8e0273c8298910d42db88bec2f8e50facde2a325a5da74c9fa0d2e"
+}
