@@ -1,0 +1,42 @@
+{
+  "packages": {
+    "forge-std": {
+      "repository": "https://github.com/foundry-rs/forge-std",
+      "revision": "ba4733c33497dd0c0983dcc033d7645576cc46e5"
+    },
+    "openzeppelin-contracts": {
+      "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+      "revision": "acd4ff74de833399287ed6b31b4debf6b2b35527",
+      "tag": "v5.2.0"
+    }
+  },
+  "sha256": {
+    "lib/forge-std/LICENSE-APACHE": "50b6bf8bdb63265ce14953b480b7aaa0271e78f56843b99c184abd3ae5048cd7",
+    "lib/forge-std/LICENSE-MIT": "6d185dfe089d4de346d391fc5997fbd4739bad1d6556010413c10f420d704ecc",
+    "lib/forge-std/src/Base.sol": "76b05dda37981797d3d403f29fc6cad79b46e2fc11da47d649ff13acb69158b2",
+    "lib/forge-std/src/StdAssertions.sol": "094cd0489ca2cd59e06aa8587163f79c49184e982b07d9b5ee929b3485f62b32",
+    "lib/forge-std/src/StdChains.sol": "a991421c558459756142b6e25825959b880e0a41b50f14ac87183f57b0c0c7f3",
+    "lib/forge-std/src/StdCheats.sol": "a42c1c691b0ea4daf9fb4d7f3617501fd2dc3c4fb738fa22cd1260b535425979",
+    "lib/forge-std/src/StdConstants.sol": "647fce028d730a3a6a843018dc51c2be76e81de18df2b98aff415d6367990acd",
+    "lib/forge-std/src/StdError.sol": "c1f7271f11a44628810ef6beb2da0c43add131ff9cfcac4d7acd633c269ccf7d",
+    "lib/forge-std/src/StdInvariant.sol": "39f68926c59f072d1b023f8e9e51bfe56c1b6d4aa9cd3b3bbb3214d70eb369e3",
+    "lib/forge-std/src/StdJson.sol": "014e57fc9a9f5d0c97082923c121a46fda667e6bd3b8d6a51521390fe27b203c",
+    "lib/forge-std/src/StdMath.sol": "7224cea66fc06c7a9d303084cccb14eaedffe4b21b3f9695d06dc590d2894d7d",
+    "lib/forge-std/src/StdStorage.sol": "d065072920d0c6d7801adc7ce83f5f6c5dce239c1f022cfd2abc400c67b8b5de",
+    "lib/forge-std/src/StdStyle.sol": "903ea6f4e4aa31e416b5043abecc09ced41dc78c9ce9dabb5c745337ee13139d",
+    "lib/forge-std/src/StdToml.sol": "08ab6f56c8f260b5290ab04ba54dee5d30bb27e36db36ae87e2fa48d9f5bae07",
+    "lib/forge-std/src/StdUtils.sol": "a4e27662dcfa63d54102b0a85150ec35326ac6ecfeb62fa1200ad5b1acbd7453",
+    "lib/forge-std/src/Test.sol": "6ac6a04a9723f3b51a86fcd0c4cf02e8011f112df052a8eea8e986d85b0bb3d7",
+    "lib/forge-std/src/Vm.sol": "2be2eb5fc0e0702354a7e073025e9ffdb4f08ecbf6888c7d96ab1c16d53f354c",
+    "lib/forge-std/src/console.sol": "894dc6e40fe62d887df6243112d8c775df2db60babc3024ee04a5564b90af64d",
+    "lib/forge-std/src/console2.sol": "62d8ccbd118fec4f99c5e847322d6ca0d7fbe6a0a16e5a26b0590869fcd69357",
+    "lib/forge-std/src/interfaces/IMulticall3.sol": "4453fb721509f03cd792b718b8d1621f3a8db4065311a85c686b9fd09d781a6d",
+    "lib/forge-std/src/safeconsole.sol": "fd74d8ed377e1470217cd6dce7699dcbc4e79b3893f17ae2a298c0e7e4418181",
+    "lib/openzeppelin-contracts/LICENSE": "8b3fddff3cff904ab9bd7c48a9288fb08ab4f47b179c07af6df7886b12cb04d6",
+    "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol": "56380323009ef4a119d44550b910fde1bff9cedde8f7f4c690152c7629bc3338",
+    "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": "c322867b0b30f6d5f791e5ab9af5e3f5ff1c8c127906748f6725e592a5f40719",
+    "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": "30edf7394bab78d48b7db3a059248e1ea7c2c77d2ec0e37a13bb91415aafbe5a",
+    "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": "9e7c70ec72d2f7d592e23ea84f3852b04f91f6f644ce57e0263493046b36afb9",
+    "lib/openzeppelin-contracts/contracts/utils/Context.sol": "847fda5460fee70f56f4200f59b82ae622bb03c79c77e67af010e31b7e2cc5b6"
+  }
+}
